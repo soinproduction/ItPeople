@@ -163,12 +163,12 @@ var myFullpage = new (_vendor_fullPage__WEBPACK_IMPORTED_MODULE_0___default())('
   menu: '#myMenu',
   lockAnchors: false,
   anchors: ['index', 'services', 'portfolio', 'contacts', 'startProject'],
-  navigation: false,
-  navigationPosition: 'right',
-  navigationTooltips: ['firstSlide', 'secondSlide'],
-  showActiveTooltip: false,
-  slidesNavigation: false,
-  slidesNavPosition: 'bottom',
+  // navigation: false,
+  // navigationPosition: 'right',
+  // navigationTooltips: ['firstSlide', 'secondSlide'],
+  // showActiveTooltip: false,
+  // slidesNavigation: false,
+  // slidesNavPosition: 'bottom',
   // Scrolling
   css3: true,
   scrollingSpeed: 700,
@@ -206,7 +206,7 @@ var myFullpage = new (_vendor_fullPage__WEBPACK_IMPORTED_MODULE_0___default())('
   paddingBottom: '10px',
   fixedElements: '#myMenu',
   responsiveWidth: 1024,
-  responsiveHeight: 800,
+  // responsiveHeight: 800,
   responsiveSlides: false,
   parallax: false,
   parallaxOptions: {
@@ -987,8 +987,7 @@ if (typeof document !== 'undefined') {
   */
 
 
-  function showError(type, text) {
-    win.console && win.console[type] && win.console[type]('fullPage: ' + text);
+  function showError(type, text) {// win.console && win.console[type] && win.console[type]('fullPage: ' + text);
   }
 
   function isVisible(el) {
@@ -5981,11 +5980,9 @@ if (typeof document !== 'undefined') {
     var positionStyle = ['left', 'right'].indexOf(position) > -1 ? "".concat(position, ": 0;") : '';
     var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label, "\n            </a>\n        </div>\n    ");
     var lastSection = getLast(state.sections);
-    var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
-
-    if (lastSection && lastSection.item && shouldUseWaterMark) {
-      lastSection.item.insertAdjacentHTML('beforeend', waterMark);
-    }
+    var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid; // if (lastSection && lastSection.item && shouldUseWaterMark) {
+    //   lastSection.item.insertAdjacentHTML('beforeend', waterMark);
+    // }
   }
 
   !function () {
@@ -6370,15 +6367,13 @@ if (typeof document !== 'undefined') {
 
   function displayWarnings() {
     var l = getOptions()['li' + 'c' + 'enseK' + 'e' + 'y'];
-    var msgStyle = 'font-size: 15px;background:yellow;';
-
-    if (!isOK()) {
-      showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
-      showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
-    } else if (l && l.length < 20) {
-      console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
-      console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
-    }
+    var msgStyle = 'font-size: 15px;background:yellow;'; // if (!isOK()) {
+    //   showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
+    //   showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
+    // } else if (l && l.length < 20) {
+    //   console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
+    //   console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
+    // }
 
     if (hasClass($html, ENABLED)) {
       showError('error', 'Fullpage.js can only be initialized once and you are doing it multiple times!');

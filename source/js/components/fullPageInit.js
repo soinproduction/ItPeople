@@ -5,12 +5,12 @@ var myFullpage = new fullpage('#fullpage', {
 	menu: '#myMenu',
 	lockAnchors: false,
 	anchors:['index', 'services','portfolio','contacts','startProject'],
-	navigation: false,
-	navigationPosition: 'right',
-	navigationTooltips: ['firstSlide', 'secondSlide'],
-	showActiveTooltip: false,
-	slidesNavigation: false,
-	slidesNavPosition: 'bottom',
+	// navigation: false,
+	// navigationPosition: 'right',
+	// navigationTooltips: ['firstSlide', 'secondSlide'],
+	// showActiveTooltip: false,
+	// slidesNavigation: false,
+	// slidesNavPosition: 'bottom',
 
 	// Scrolling
 	css3: true,
@@ -56,7 +56,7 @@ var myFullpage = new fullpage('#fullpage', {
 
 
 	responsiveWidth: 1024,
-	responsiveHeight: 800,
+	// responsiveHeight: 800,
 	responsiveSlides: false,
 	parallax: false,
 	parallaxOptions: {type: 'reveal', percentage: 62, property: 'translate'},

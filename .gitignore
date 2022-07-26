@@ -6,12 +6,11 @@
 *.pdf
 *.psd
 *.sublime*
-# build/
+build/
 docs/
 node_modules/
 npm-debug.*
 source/css/*.css
 source/css/*.map
 Thumbs.db
-
 package-lock.json

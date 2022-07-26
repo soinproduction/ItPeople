@@ -220,7 +220,7 @@
   */
 
   function showError(type, text) {
-    win.console && win.console[type] && win.console[type]('fullPage: ' + text);
+    // win.console && win.console[type] && win.console[type]('fullPage: ' + text);
   }
   function isVisible(el) {
     var style = win.getComputedStyle(el);
@@ -5119,9 +5119,9 @@
     var lastSection = getLast(state.sections);
     var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
 
-    if (lastSection && lastSection.item && shouldUseWaterMark) {
-      lastSection.item.insertAdjacentHTML('beforeend', waterMark);
-    }
+    // if (lastSection && lastSection.item && shouldUseWaterMark) {
+    //   lastSection.item.insertAdjacentHTML('beforeend', waterMark);
+    // }
   }
 
   !function () {
@@ -5506,13 +5506,13 @@
     var l = getOptions()['li' + 'c' + 'enseK' + 'e' + 'y'];
     var msgStyle = 'font-size: 15px;background:yellow;';
 
-    if (!isOK()) {
-      showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
-      showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
-    } else if (l && l.length < 20) {
-      console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
-      console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
-    }
+    // if (!isOK()) {
+    //   showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
+    //   showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
+    // } else if (l && l.length < 20) {
+    //   console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
+    //   console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
+    // }
 
     if (hasClass($html, ENABLED)) {
       showError('error', 'Fullpage.js can only be initialized once and you are doing it multiple times!');
