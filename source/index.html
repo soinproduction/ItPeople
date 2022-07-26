@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="Ru">
+  @include('partials/head.html')
+
+<body class="has-video">
+    @include('partials/header.html')
+
+
+
+    <main id="fullpage">
+
+    <nav class="main-nav" id="myMenu">
+      <ul class="main-nav__list">
+        <li class="main-nav__item active" data-menuanchor="index">
+          <a href="#index" class="main-nav__link">
+            Главная
+          </a>
+        </li>
+        <li class="main-nav__item" data-menuanchor="services">
+          <a href="#services" class="main-nav__link" >
+            Услуги
+          </a>
+        </li>
+        <li class="main-nav__item" data-menuanchor="portfolio">
+          <a href="#portfolio" class="main-nav__link">
+            Портфолио
+          </a>
+        </li>
+        <li class="main-nav__item" data-menuanchor="contacts">
+          <a href="#contacts" class="main-nav__link">
+            Контакты
+          </a>
+        </li>
+        <li class="main-nav__item" data-menuanchor="startProject">
+          <a href="#startProject" class="main-nav__link">
+            Начать проект
+          </a>
+        </li>
+
+      </ul>
+    </nav>
+
+
+      <section class="index-first section active" id="index" style="background-image: url(img/first-bg.png);">
+
+        <div class="index-first__image">
+            <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
+        </div>
+
+        <div class="container">
+          <div class="index-first__box">
+              <div class="main-top index-first__top">
+                <h2 class="main-top__title">
+                  ITpeople
+                </h2>
+                <p class="main-top__subtitle">
+                  Смотрите больше о нашей компании
+                </p>
+              </div>
+              <div class="index-first__video">
+                <picture>
+                  <source type='image/webp' srcset='img/video/video-prev.webp'>
+                  <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
+                </picture>
+              </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="services"></section>
+      <section class="section" id="portfolio"></section>
+      <section class="section" id="contacts"></section>
+      <section class="section" id="startProject"></section>
+
+
+
+    </main>
+
+
+    @include('partials/footer.html')
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>
