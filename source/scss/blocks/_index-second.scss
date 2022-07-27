@@ -1,0 +1,50 @@
+.index-second {
+  position: relative;
+  z-index: 0;
+
+  &__image {
+    width: 749px;
+    height: clamp(533px, 52.708vw, 759px);
+    position: absolute;
+    z-index: -1;
+    right: 0;
+    bottom: 0;
+  }
+
+  &__item {
+    position: initial !important;
+  }
+
+  &__inner {
+    max-width: Min(47.917vw,690px);
+    width: 100%;
+    margin-left: auto;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__mini {
+    transition: opacity .4s;
+
+    &.active {
+      opacity: 0;
+    }
+
+    @media screen and (min-width: 1025px) {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 20px;
+      align-items: stretch;
+    }
+  }
+
+  &__big {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+
+}

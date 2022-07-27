@@ -1,4 +1,5 @@
 import './components/fullPageInit';
+import './components/curentCard';
 // import './components/sliders';
 // import './components/tabs';
 

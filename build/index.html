@@ -14,9 +14,8 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 
-<body class="has-video">
+<body>
     <header>
-  <div class="container">
     <div class="header">
       <a href="#index" class="header__logo">
         <svg width='126' height='60'>
@@ -24,10 +23,7 @@
         </svg>
       </a>
     </div>
-  </div>
 </header>
-
-    <main id="fullpage">
 
     <nav class="main-nav" id="myMenu">
       <ul class="main-nav__list">
@@ -51,8 +47,8 @@
             Контакты
           </a>
         </li>
-        <li class="main-nav__item" data-menuanchor="startProject">
-          <a href="#startProject" class="main-nav__link">
+        <li class="main-nav__item" data-menuanchor="project">
+          <a href="#project" class="main-nav__link">
             Начать проект
           </a>
         </li>
@@ -60,7 +56,9 @@
       </ul>
     </nav>
 
-      <section class="index-first section active" id="index" style="background-image: url(img/first-bg.png);">
+    <main id="fullpage">
+
+      <section class="index-first section active" style="background-image: url(img/first-bg.png);">
 
         <div class="index-first__image">
             <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
@@ -86,16 +84,336 @@
         </div>
       </section>
 
-      <section class="section" id="services"></section>
-      <section class="section" id="portfolio"></section>
-      <section class="section" id="contacts"></section>
-      <section class="section" id="startProject"></section>
+      <section class="index-second section" style="background-image: url(img/second-bg.png);">
+        <div class="index-second__image">
+          <img width='749' height='759' src='img/second-image.svg' alt='background'>
+      </div>
+
+      <div class="container swiper-container">
+
+        <div class="index-second__inner">
+          <ul class="index-second__mini swiper-wrapper">
+            <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background">
+                  <button class="mini-card__btn" data-mini="1">
+                    <svg width='10' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow-r'></use>
+                    </svg>
+                  </button>
+
+                  <div class="mini-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon.svg" alt="icon">
+                  </div>
+
+                  <span class="mini-card__title">
+                    Разработка
+                    програмного обеспечения
+                  </span>
+
+                  <p class="mini-card__text">
+                    Создаем всевозможные программы, веб приложения, онлайн сервисы любой сложности. Автоматизируем бизнес процессы, разрабатываем ботов, парсеры, десктоптные программы для Windows, Linux, MacOS и др.
+                  </p>
+                </div>
+            </li>
+            <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background">
+                  <button class="mini-card__btn" data-mini="2">
+                    <svg width='10' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow-r'></use>
+                    </svg>
+                  </button>
+
+                  <div class="mini-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon2.svg" alt="icon">
+                  </div>
+
+                  <span class="mini-card__title">
+                    Разработка
+                    мобильных приложений
+                  </span>
+
+                  <p class="mini-card__text">
+                    Разрабатываем мобильные приложения/игры под iOS и Android любой сложности! Вам срочно нужно работающие мобильное приложение к уже существующему бизнесу? Мы его создадим!
+                  </p>
+                </div>
+            </li>
+            <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background">
+                  <button class="mini-card__btn" data-mini="3">
+                    <svg width='10' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow-r'></use>
+                    </svg>
+                  </button>
+
+                  <div class="mini-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon3.svg" alt="icon">
+                  </div>
+
+                  <span class="mini-card__title">
+                    Сопровождение
+                    программного обеспечения
+                  </span>
+
+                  <p class="mini-card__text">
+                    Сопровождение программного обеспечения — у вас уже есть программное обеспечение, но оно требует исправлений, изменений и улучшений? Мы предлагаем его оптимизацию и устранение недостатков, с последующим обслуживанием
+                  </p>
+                </div>
+            </li>
+            <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background">
+                  <button class="mini-card__btn" data-mini="4">
+                    <svg width='10' height='16'>
+                      <use href='img/sprite/sprite.svg#arrow-r'></use>
+                    </svg>
+                  </button>
+
+                  <div class="mini-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon4.svg" alt="icon">
+                  </div>
+
+                  <span class="mini-card__title">
+                    Веб-сайты <br>
+                    и дизайн
+                  </span>
+
+                  <p class="mini-card__text">
+                    Создадим без сайт с нуля под ключ с уникальным дизайном и любой сложности! Лендинги продуктов или услуг, сайты-визитки, корпоративные сайты, интернет-магазины, веб-приложения, а также дизайн визиток, логотипов, упаковок, товаров и прочего
+                  </p>
+                </div>>
+            </li>
+          </ul>
+
+          <ul class="index-second__big">
+            <li class="big-card" data-big="1">
+
+              <button class="big-card__hide">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+
+              </button>
+
+              <article class="big-card__article card-background">
+                <div class="big-card__top">
+                  <div class="big-card__icon">
+                      <img width='70' height='70' src="img/sprite/icon.svg" alt="icon">
+                  </div>
+
+                  <span class="big-card__title">
+                    Разработка <br>
+                    програмного обеспечения
+                  </span>
+
+                </div>
+
+                <p>
+                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                  <br><br>
+                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                </p>
+
+              </article >
+            </li>
+            <li class="big-card" data-big="2">
+
+              <button class="big-card__hide">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+
+              <article class="big-card__article card-background">
+                <div class="big-card__top">
+                  <div class="big-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon2.svg" alt="icon">
+                  </div>
+
+                  <span class="big-card__title">
+                    Разработка <br>
+                    мобильных приложений
+                  </span>
+
+                </div>
+
+                <p>
+                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                  <br><br>
+                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                </p>
+
+              </article >
+            </li>
+            <li class="big-card" data-big="3">
+
+              <button class="big-card__hide">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+
+              <article class="big-card__article card-background">
+                <div class="big-card__top">
+                  <div class="big-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon3.svg" alt="icon">
+                  </div>
+
+                  <span class="big-card__title">
+                    Сопровождение <br>
+                    программного обеспечения
+                  </span>
+
+                </div>
+
+                <p>
+                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                  <br><br>
+                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                </p>
+
+              </article >
+            </li>
+            <li class="big-card" data-big="4">
+
+              <button class="big-card__hide">
+                <svg width='16' height='16'>
+                  <use href='img/sprite/sprite.svg#close'></use>
+                </svg>
+              </button>
+
+              <article class="big-card__article card-background">
+                <div class="big-card__top">
+                  <div class="big-card__icon">
+                    <img width='70' height='70' src="img/sprite/icon4.svg" alt="icon">
+                  </div>
+
+                  <span class="big-card__title">
+                    Веб-сайты <br>
+                    и дизайн
+                  </span>
+
+                </div>
+
+                <p>
+                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                </p>
+
+              </article >
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+      </section>
+
+      <section class="section" style="background-image: url(img/first-bg.png);">
+        <div class="index-first__image">
+          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
+      </div>
+
+      <div class="container">
+        <div class="index-first__box">
+            <div class="main-top index-first__top">
+              <h2 class="main-top__title">
+                ITpeople
+              </h2>
+              <p class="main-top__subtitle">
+                Смотрите больше о нашей компании
+              </p>
+            </div>
+            <div class="index-first__video">
+              <picture>
+                <source type='image/webp' srcset='img/video/video-prev.webp'>
+                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
+              </picture>
+            </div>
+        </div>
+      </div>
+      </section>
+      <section class="section" style="background-image: url(img/first-bg.png);">
+        <div class="index-first__image">
+          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
+      </div>
+
+      <div class="container">
+        <div class="index-first__box">
+            <div class="main-top index-first__top">
+              <h2 class="main-top__title">
+                ITpeople
+              </h2>
+              <p class="main-top__subtitle">
+                Смотрите больше о нашей компании
+              </p>
+            </div>
+            <div class="index-first__video">
+              <picture>
+                <source type='image/webp' srcset='img/video/video-prev.webp'>
+                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
+              </picture>
+            </div>
+        </div>
+      </div>
+      </section>
+      <section class="section" style="background-image: url(img/first-bg.png);">
+        <div class="index-first__image">
+          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
+      </div>
+
+      <div class="container">
+        <div class="index-first__box">
+            <div class="main-top index-first__top">
+              <h2 class="main-top__title">
+                ITpeople
+              </h2>
+              <p class="main-top__subtitle">
+                Смотрите больше о нашей компании
+              </p>
+            </div>
+            <div class="index-first__video">
+              <picture>
+                <source type='image/webp' srcset='img/video/video-prev.webp'>
+                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
+              </picture>
+            </div>
+        </div>
+      </div>
+      </section>
 
     </main>
 
     <footer>
   <div class="container">
-
+    <ul class="social-list">
+      <li class="social-list__item">
+        <a href="#" class="social-list__link">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#facebook'></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#instagram'></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#tw'></use>
+          </svg>
+        </a>
+      </li>
+      <li class="social-list__item">
+        <a href="#" class="social-list__link">
+          <svg width='24' height='24'>
+            <use href='img/sprite/sprite.svg#tiktok'></use>
+          </svg>
+        </a>
+      </li>
+    </ul>
   </div>
 </footer>
 

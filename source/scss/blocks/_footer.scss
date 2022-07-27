@@ -1,0 +1,10 @@
+footer {
+  position: absolute;
+  z-index: 20;
+  bottom: clamp(25px, 3.472vw, 50px);
+  left: clamp(25px, 5.385vw, 70px);
+
+  .container {
+    padding: 0;
+  }
+}

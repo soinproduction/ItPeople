@@ -1,0 +1,19 @@
+.social-list {
+  display: flex;
+  align-items: center;
+  grid-gap: clamp(12px, 1.389vw, 20px);
+
+
+  &__link {
+    transition: all .4s;
+    color: var(--color-a);
+
+    &:hover {
+      color: var(--color-c);
+    }
+  }
+
+  svg {
+    fill: currentColor;
+  }
+}

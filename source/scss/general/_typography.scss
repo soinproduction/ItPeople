@@ -10,71 +10,43 @@
 }
 
 
-.show-more {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 202px;
-  height: 48px;
+.card-background {
+  backdrop-filter: blur(2px);
+  border-radius: 30px;
+  position: relative;
+  z-index: 0;
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  font-family: var(--font-family);
-  color: var(--color-a);
-  text-transform: uppercase;
 
-  border: 2px solid var(--plus-bg);
-
-  transition: all 0.4s;
-
-  &:hover {
-    background-color: var(--plus-bg);
-    transform: scale(1.05);
+  &::before,
+  &::after {
+    z-index: -1;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    content: '';
   }
 
-  &.disable {
-    opacity: 0.3;
-
-    pointer-events: none;
+  &::before {
+    background-image: url(../img/card-bg.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: inherit;
+    background-position: center;
   }
-}
 
-.error-message {
-  font-style: normal;
-  font-weight: 400;
-  font-size: clamp(13px, 1.25vw, 15px);
-  line-height: 110%;
-  font-family: var(--font-family);
-  color: var(--plus-bg);
-}
+  &:after {
+    border: 0.1px solid transparent;
+    border-image-source: var(--card-border);
+    border-image-slice: 60;
+    border-image-width: 60;
+    border-image-repeat: stretch;
+    opacity: .5;
+  }
 
-.red-border {
-  padding: clamp(10px, 1.25vw, 15px) clamp(15px, 1.667vw, 20px);
+  @-moz-document url-prefix() {
 
-  font-style: normal;
-  font-weight: 700;
-  font-size: 15px;
-  line-height: 100%;
-  font-family: var(--font-family);
-  color: var(--color-d);
-  text-transform: uppercase;
-
-  border: 2px solid var(--plus-bg);
-  transition: all .4s;
-
-  &:hover {
-    background-color: var(--plus-bg);
-    color: var(--color-a);
   }
 }
 
-.forgot-pass {
-  font-family: var(--font-family);
-  font-style: normal;
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 100%;
-  text-decoration-line: underline;
-  color: var(--color-i);
-}

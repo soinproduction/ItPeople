@@ -10,6 +10,9 @@
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_fullPageInit__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./components/fullPageInit */ "./source/js/components/fullPageInit.js");
+/* harmony import */ var _components_curentCard__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./components/curentCard */ "./source/js/components/curentCard.js");
+/* harmony import */ var _components_curentCard__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_curentCard__WEBPACK_IMPORTED_MODULE_1__);
+
  // import './components/sliders';
 // import './components/tabs';
 // import './components/accordions';
@@ -147,6 +150,37 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./source/js/components/curentCard.js":
+/*!********************************************!*\
+  !*** ./source/js/components/curentCard.js ***!
+  \********************************************/
+/***/ (function() {
+
+const cardParrents = [...document.querySelectorAll('.mini-card')];
+
+for (const cardParrent of cardParrents) {
+  const cardButton = cardParrent.querySelector('[data-mini]');
+  const bigCards = [...document.querySelectorAll('[data-big]')];
+  const listParrent = document.querySelector('.index-second__mini');
+
+  function cardButtonHendler() {
+    let curentDataId = this.getAttribute('data-mini');
+    let bigCurrentCard = document.querySelector("[data-big='".concat(curentDataId, "']"));
+    bigCurrentCard.classList.add('show');
+    listParrent.classList.add('active');
+  }
+
+  cardButton.addEventListener('click', cardButtonHendler);
+  bigCards.map(bigCard => {
+    bigCard.querySelector('.big-card__hide').addEventListener('click', function () {
+      bigCard.classList.remove('show');
+      listParrent.classList.remove('active');
+    });
+  });
+}
+
+/***/ }),
+
 /***/ "./source/js/components/fullPageInit.js":
 /*!**********************************************!*\
   !*** ./source/js/components/fullPageInit.js ***!
@@ -162,7 +196,7 @@ var myFullpage = new (_vendor_fullPage__WEBPACK_IMPORTED_MODULE_0___default())('
   // Navigation
   menu: '#myMenu',
   lockAnchors: false,
-  anchors: ['index', 'services', 'portfolio', 'contacts', 'startProject'],
+  anchors: ['index', 'services', 'portfolio', 'contacts', 'project'],
   // navigation: false,
   // navigationPosition: 'right',
   // navigationTooltips: ['firstSlide', 'secondSlide'],
@@ -197,57 +231,16 @@ var myFullpage = new (_vendor_fullPage__WEBPACK_IMPORTED_MODULE_0___default())('
   // Accessibility
   keyboardScrolling: true,
   animateAnchor: true,
-  recordHistory: true,
-  // Design
-  controlArrows: true,
   verticalCentered: true,
-  sectionsColor: ['#ccc', '#fff'],
-  paddingTop: '3em',
-  paddingBottom: '10px',
+  paddingTop: '20px',
+  paddingBottom: '20px',
   fixedElements: '#myMenu',
   responsiveWidth: 1024,
-  // responsiveHeight: 800,
-  responsiveSlides: false,
-  parallax: false,
-  parallaxOptions: {
-    type: 'reveal',
-    percentage: 62,
-    property: 'translate'
-  },
-  dropEffect: false,
-  dropEffectOptions: {
-    speed: 2300,
-    color: '#F82F4D',
-    zIndex: 9999
-  },
-  waterEffect: false,
-  waterEffectOptions: {
-    animateContent: true,
-    animateOnMouseMove: true
-  },
-  cards: false,
-  cardsOptions: {
-    perspective: 100,
-    fadeContent: true,
-    fadeBackground: true
-  },
-  // Custom selectors
+  responsiveHeight: 700,
   sectionSelector: '.section',
   slideSelector: '.slide',
   lazyLoading: true,
-  observer: true,
-  // credits: { enabled: true, label: 'Made with fullPage.js', position: 'right'},
-  // Events
-  beforeLeave: function (origin, destination, direction, trigger) {},
-  onLeave: function (origin, destination, direction, trigger) {},
-  afterLoad: function (origin, destination, direction, trigger) {},
-  afterRender: function () {},
-  afterResize: function (width, height) {},
-  afterReBuild: function () {},
-  afterResponsive: function (isResponsive) {},
-  afterSlideLoad: function (section, origin, destination, direction, trigger) {},
-  onSlideLeave: function (section, origin, destination, direction, trigger) {},
-  onScrollOverflow: function (section, slide, position, direction) {}
+  observer: true
 });
 
 /***/ }),

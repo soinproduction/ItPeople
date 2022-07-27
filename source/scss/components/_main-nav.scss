@@ -48,4 +48,8 @@
       background-clip: initial;
     }
   }
+
+  @media screen and (min-width: 1025px) and (min-height: 700px) {
+    position: absolute;
+  }
 }
