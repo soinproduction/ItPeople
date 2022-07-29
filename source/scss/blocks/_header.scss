@@ -13,11 +13,8 @@ header {
     left: 0;
     bottom: initial;
     right: 0;
-
-    background: linear-gradient(180deg, #0A0310 0%, rgba(10, 3, 16, 0) 100%);
-
-
-    // display: none;
+    padding: clamp(25px, 3.472vw, 50px) clamp(20px, 3.472vw, 50px) 0;
+    background: linear-gradient(180deg, #0A0310 30%, rgba(10, 3, 16, 0) 100%);
   }
 }
 
@@ -27,4 +24,36 @@ header {
   align-items: flex-start;
   justify-content: space-between;
   height: 100%;
+
+  @media screen and (max-width: 1025px) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
+
+@media screen and (max-width: 1025px) {
+  // section {
+  //   height: calc((100vh - var(--header-height))) !important;
+  // }
+
+  section, body, html {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+  }
+
+  .index-first {
+    padding-top: calc(var(--header-height) + 20px);
+  }
+}
+
+
+@media screen and (max-width: 576px) {
+  section {
+    min-height: 700px;
+    height: initial;
+  }
+
+}
+
+

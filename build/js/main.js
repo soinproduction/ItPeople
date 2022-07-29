@@ -224,25 +224,26 @@ const initFullPage = () => {
   ;
 
   if (containerWidth < breakpoint) {
-    let myFullpage = new (_vendor_fullPage__WEBPACK_IMPORTED_MODULE_0___default())('#fullpage', {
-      // Navigation
-      menu: '#myMenu',
-      lockAnchors: false,
-      anchors: ['first', 'services', 'portfolio', 'contacts', 'project'],
-      // autoScrolling: false,
-      scrollingSpeed: 1500,
-      // normalScrollElements: '.portfolio-section , .index-second',
-      // continuousVertical: false,
-      keyboardScrolling: true,
-      // animateAnchor: true,
-      // verticalCentered: true,
-      // fixedElements:  '#myMenu',
-      sectionSelector: '.section',
-      paddingBottom: '50px',
-      paddingTop: '50px',
-      lazyLoading: true,
-      observer: true
-    });
+    // let myFullpage = new fullpage('#fullpage', {
+    //   // Navigation
+    //   menu: '#myMenu',
+    //   lockAnchors: false,
+    //   anchors:['first', 'services','portfolio','contacts','project'],
+    //   // autoScrolling: false,
+    //   scrollingSpeed: 1500,
+    //   // normalScrollElements: '.portfolio-section , .index-second',
+    //   // continuousVertical: false,
+    //   keyboardScrolling: true,
+    //   // animateAnchor: true,
+    //   // verticalCentered: true,
+    //   // fixedElements:  '#myMenu',
+    //   sectionSelector: '.section',
+    //   paddingBottom: '50px',
+    //   paddingTop: '50px',
+    //   lazyLoading: true,
+    //   observer: true,
+    // });
+    fullpage_api.destroy('all');
   }
 };
 
@@ -305,7 +306,15 @@ for (const mobileSlider of document.querySelectorAll('.mobile-slider')) {
           slidesPerView: "auto",
           spaceBetween: 10,
           observer: true,
-          observeParents: true
+          observeParents: true,
+          pagination: {
+            el: '.slider-project-pag',
+            type: 'bullets'
+          },
+          navigation: {
+            nextEl: '.slider-project-next',
+            prevEl: '.slider-project-prev'
+          }
         });
       };
 
@@ -352,12 +361,21 @@ if (mySlider) {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    autoHeight: true,
+    pagination: {
+      el: '.slider-portfolio-pag',
+      type: 'bullets'
+    },
+    navigation: {
+      nextEl: '.slider-portfolio-next',
+      prevEl: '.slider-portfolio-prev'
+    },
     thumbs: {
       swiper: portfolioSliderNav
-    },
-    autoplay: {
-      delay: 4000
-    }
+    } // autoplay: {
+    //   delay: 4000,
+    // },
+
   });
 }
 

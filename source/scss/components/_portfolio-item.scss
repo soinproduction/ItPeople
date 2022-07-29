@@ -1,9 +1,12 @@
 .portfolio-item {
   padding-top: clamp(24px, 7.639vw, 110px);
 
+
   &__inner {
     padding: 0 clamp(24px, 2.778vw, 40px)
-    clamp(36px, 6.389vw, 92px);
+    clamp(36px, 6.389vw, 36px);
+    min-height: Min(33.056vw,476px);
+
 
     display: flex;
     align-items: flex-start;
@@ -13,8 +16,8 @@
   &__image {
     margin-top: calc(clamp(24px, 7.639vw, 110px) * -1);
     margin-bottom: clamp(20px, 2.083vw, 30px);
-    width: clamp(118px, 17.5vw, 252px);
-    height: clamp(140px, 20.764vw, 299px);
+    // width: 100%;
+    // height: clamp(140px, 20.764vw, 299px);
   }
 
   &__top {

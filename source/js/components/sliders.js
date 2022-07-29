@@ -17,7 +17,16 @@ for (const mobileSlider of document.querySelectorAll('.mobile-slider')) {
         slidesPerView: "auto",
         spaceBetween: 10,
         observer: true,
-        observeParents: true
+        observeParents: true,
+
+        pagination: {
+          el: '.slider-project-pag',
+          type: 'bullets',
+        },
+        navigation: {
+          nextEl: '.slider-project-next',
+          prevEl: '.slider-project-prev',
+        },
         });
       };
 
@@ -51,6 +60,7 @@ if (mySlider) {
     observeSlideChildren: true,
     watchSlidesVisibility: true,
     watchSlidesProgress: true,
+
     breakpoints: {
       320: {
         direction: 'horizontal',
@@ -69,12 +79,21 @@ if (mySlider) {
     observer: true,
     observeParents: true,
     observeSlideChildren: true,
+    autoHeight:true,
+    pagination: {
+      el: '.slider-portfolio-pag',
+      type: 'bullets',
+    },
+    navigation: {
+      nextEl: '.slider-portfolio-next',
+      prevEl: '.slider-portfolio-prev',
+    },
     thumbs: {
      swiper: portfolioSliderNav,
     },
-    autoplay: {
-      delay: 4000,
-    },
+    // autoplay: {
+    //   delay: 4000,
+    // },
   });
 }
 

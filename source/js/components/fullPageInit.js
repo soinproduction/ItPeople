@@ -30,31 +30,34 @@ const initFullPage = () => {
     });
   };
   if (containerWidth < breakpoint) {
-    let myFullpage = new fullpage('#fullpage', {
-      // Navigation
-      menu: '#myMenu',
-      lockAnchors: false,
-      anchors:['first', 'services','portfolio','contacts','project'],
+    // let myFullpage = new fullpage('#fullpage', {
+    //   // Navigation
+    //   menu: '#myMenu',
+    //   lockAnchors: false,
+    //   anchors:['first', 'services','portfolio','contacts','project'],
 
-      // autoScrolling: false,
-      scrollingSpeed: 1500,
-      // normalScrollElements: '.portfolio-section , .index-second',
-      // continuousVertical: false,
-      keyboardScrolling: true,
-      // animateAnchor: true,
-      // verticalCentered: true,
-      // fixedElements:  '#myMenu',
+    //   // autoScrolling: false,
+    //   scrollingSpeed: 1500,
+    //   // normalScrollElements: '.portfolio-section , .index-second',
+    //   // continuousVertical: false,
+    //   keyboardScrolling: true,
+    //   // animateAnchor: true,
+    //   // verticalCentered: true,
+    //   // fixedElements:  '#myMenu',
 
 
-      sectionSelector: '.section',
+    //   sectionSelector: '.section',
 
-      paddingBottom: '50px',
-      paddingTop: '50px',
+    //   paddingBottom: '50px',
+    //   paddingTop: '50px',
 
-      lazyLoading: true,
-      observer: true,
-    });
+    //   lazyLoading: true,
+    //   observer: true,
+    // });
+
+    fullpage_api.destroy('all');
   }
+
 }
 
   window.addEventListener('resize', () => {
