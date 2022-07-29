@@ -1628,9 +1628,9 @@ html.fp-enabled,
 
 /* Disabling vertical centering on scrollable elements */
 .fp-overflow {
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .fp-overflow {
@@ -2065,6 +2065,8 @@ input[type=number] {
 @-moz-document url-prefix() {}
 
 .slider-dots {
+  z-index: 1;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2818,8 +2820,19 @@ header {
     bottom: initial;
     right: 0;
     padding: clamp(25px, 3.472vw, 50px) clamp(20px, 3.472vw, 50px) 0;
-    background: -webkit-gradient(linear, left top, left bottom, color-stop(30%, #0A0310), to(rgba(10, 3, 16, 0)));
-    background: linear-gradient(180deg, #0A0310 30%, rgba(10, 3, 16, 0) 100%);
+  }
+  header::before {
+    width: 100vw;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: 250px;
+    content: "";
+    background: -webkit-gradient(linear, left top, left bottom, from(#0A0310), to(rgba(10, 3, 16, 0)));
+    background: linear-gradient(180deg, #0A0310 0%, rgba(10, 3, 16, 0) 100%);
+    position: absolute;
+    z-index: -1;
+    pointer-events: none;
   }
 }
 
@@ -2855,6 +2868,12 @@ header {
     overflow-x: hidden;
     width: 100%;
     height: 100%;
+  }
+  body {
+    height: initial;
+  }
+  section {
+    overflow: initial;
   }
   .index-first {
     padding-top: calc(var(--header-height) + 20px);
@@ -3055,9 +3074,10 @@ header {
   }
 }
 
-.portfolio-section .slider-dots {
-  margin: 0 auto;
+.swiper-wrapper.active + .slider-dots {
+  opacity: 0;
 }
+
 .portfolio-section__box {
   max-width: min(52.083vw, 750px);
   width: 100%;
@@ -3087,7 +3107,7 @@ header {
   }
 }
 .portfolio-section__slider {
-  max-width: min(35.486vw, 570px);
+  max-width: min(35.486vw, 510px);
   width: 100%;
 }
 .portfolio-section__slider .swiper-wrapper {
@@ -3103,9 +3123,12 @@ header {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+  .portfolio-section__slider .swiper-slide .portfolio-item, .portfolio-section__slider .swiper-slide .portfolio-item__inner {
+    height: 100%;
   }
 }
 .portfolio-section__slider-nav {

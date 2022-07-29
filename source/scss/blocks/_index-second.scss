@@ -88,3 +88,7 @@
 
 
 }
+
+.swiper-wrapper.active + .slider-dots {
+  opacity: 0;
+}

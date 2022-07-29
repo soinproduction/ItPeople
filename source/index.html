@@ -7,7 +7,7 @@
 
   <main id="fullpage">
 
-    <section class="index-first section active" style="background-image: url(img/first-bg.png);">
+    <section class="index-first section active" data-scroll='first' style="background-image: url(img/first-bg.png);">
       <div class="section__inner">
         <div class="index-first__image">
           <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
@@ -43,13 +43,9 @@
         </div>
       </div>
     </section>
-    <section class="index-second section" style="background-image: url(img/second-bg.png);">
+    <section class="index-second section" data-scroll='services' style="background-image: url(img/second-bg.png);">
 
       <div class="section__inner">
-        <div class="index-second__image">
-          <img width='749' height='759' src='img/second-image.svg' alt='background'>
-        </div>
-
         <div class="container">
 
           <div class="index-second__inner mobile-slider swiper-container">
@@ -149,6 +145,24 @@
                 </div>
               </li>
             </ul>
+
+            <div class="slider-dots">
+              <button class="slider-project-prev">
+                <svg width='40' height='40'>
+                  <use href='img/sprite/sprite.svg#prev'></use>
+                </svg>
+              </button>
+
+              <div class="slider-project-pag swiper-pagination"></div>
+
+              <button class="slider-project-next">
+                <svg width='40' height='40'>
+                  <use href='img/sprite/sprite.svg#next'></use>
+                </svg>
+              </button>
+
+
+            </div>
 
             <ul class="index-second__big">
               <li class="big-card" data-big="1">
@@ -280,27 +294,11 @@
         </div>
       </div>
 
-      <div class="slider-dots">
-        <button class="slider-project-prev">
-          <svg width='40' height='40'>
-            <use href='img/sprite/sprite.svg#prev'></use>
-          </svg>
-        </button>
 
-        <div class="slider-project-pag swiper-pagination"></div>
-
-        <button class="slider-project-next">
-          <svg width='40' height='40'>
-            <use href='img/sprite/sprite.svg#next'></use>
-          </svg>
-        </button>
-
-
-      </div>
 
 
     </section>
-    <section class="portfolio-section section" style="background-image: url(img/portfolio-bg.png);">
+    <section class="portfolio-section section" data-scroll='portfolio' style="background-image: url(img/portfolio-bg.png);">
       <div class="section__inner">
         <div class="container">
           <div class="portfolio-section__box">
@@ -498,7 +496,7 @@
 
 
     </section>
-    <section class="contact-section section" style="background-image: url(img/contact-bg.png);">
+    <section class="contact-section section" data-scroll='contacts' style="background-image: url(img/contact-bg.png);">
 
       <div class="section__inner">
 
@@ -603,7 +601,7 @@
 
 
     </section>
-    <section class="project-section section" style="background-image: url(img/project-bg.png);">
+    <section class="project-section section" data-scroll='project' style="background-image: url(img/project-bg.png);">
 
 
       <div class="section__inner">

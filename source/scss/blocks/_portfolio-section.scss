@@ -1,10 +1,6 @@
 .portfolio-section {
 
 
-  .slider-dots {
-    margin: 0 auto;
-  }
-
   &__box {
     max-width: Min(52.083vw, 750px);
     width: 100%;
@@ -26,7 +22,7 @@
   }
 
   &__slider {
-    max-width: Min(35.486vw, 570px);
+    max-width: Min(35.486vw, 510px);
     width: 100%;
 
     .swiper-wrapper {
@@ -34,11 +30,15 @@
     }
 
     .swiper-slide {
-      min-height: MIn(40.069vw, 577px);
+      min-height: Min(40.069vw, 577px);
 
       @media screen and (max-width: 576px) {
         display: flex;
-        align-items: center;
+        align-items: stretch;
+
+        .portfolio-item, .portfolio-item__inner  {
+          height: 100%;
+        }
       }
     }
 

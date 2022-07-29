@@ -14,6 +14,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _components_curentCard__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_components_curentCard__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _components_galery__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./components/galery */ "./source/js/components/galery.js");
 /* harmony import */ var _components_sliders__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./components/sliders */ "./source/js/components/sliders.js");
+/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./components/anchor */ "./source/js/components/anchor.js");
+/* harmony import */ var _components_anchor__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_components_anchor__WEBPACK_IMPORTED_MODULE_4__);
 
 
 
@@ -22,8 +24,8 @@ __webpack_require__.r(__webpack_exports__);
 // import './components/to-top';
 // import './components/select';
 // import './components/counter';
-// import './components/anchor';
-// import './components/more-review';
+
+ // import './components/more-review';
 // import './components/modals';
 // import './components/inputmask';
 // import './components/replaceEl';
@@ -153,6 +155,16 @@ __webpack_require__.r(__webpack_exports__);
 
 /***/ }),
 
+/***/ "./source/js/components/anchor.js":
+/*!****************************************!*\
+  !*** ./source/js/components/anchor.js ***!
+  \****************************************/
+/***/ (function() {
+
+
+
+/***/ }),
+
 /***/ "./source/js/components/curentCard.js":
 /*!********************************************!*\
   !*** ./source/js/components/curentCard.js ***!
@@ -211,11 +223,10 @@ const initFullPage = () => {
       keyboardScrolling: true,
       animateAnchor: true,
       verticalCentered: true,
-      // fixedElements:  '#myMenu',
       responsiveWidth: 1025,
       sectionSelector: '.section',
-      paddingBottom: 'min(30px, 3.472vw)',
-      paddingTop: 'min(30px, 3.472vw)',
+      paddingBottom: 'min(50px, 3.472vw)',
+      paddingTop: 'min(50px, 3.472vw)',
       lazyLoading: true,
       observer: true
     });
@@ -224,25 +235,19 @@ const initFullPage = () => {
   ;
 
   if (containerWidth < breakpoint) {
-    // let myFullpage = new fullpage('#fullpage', {
-    //   // Navigation
-    //   menu: '#myMenu',
-    //   lockAnchors: false,
-    //   anchors:['first', 'services','portfolio','contacts','project'],
-    //   // autoScrolling: false,
-    //   scrollingSpeed: 1500,
-    //   // normalScrollElements: '.portfolio-section , .index-second',
-    //   // continuousVertical: false,
-    //   keyboardScrolling: true,
-    //   // animateAnchor: true,
-    //   // verticalCentered: true,
-    //   // fixedElements:  '#myMenu',
-    //   sectionSelector: '.section',
-    //   paddingBottom: '50px',
-    //   paddingTop: '50px',
-    //   lazyLoading: true,
-    //   observer: true,
-    // });
+    const anchorButtons = document.querySelectorAll('.main-nav__link');
+
+    for (const anchorButton of anchorButtons) {
+      anchorButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        const id = e.target.getAttribute('href').replace('#', '');
+        window.scrollTo({
+          top: document.querySelector("[data-scroll='".concat(id, "']")).offsetTop - 150,
+          behavior: 'smooth'
+        });
+      });
+    }
+
     fullpage_api.destroy('all');
   }
 };
@@ -298,7 +303,7 @@ for (const mobileSlider of document.querySelectorAll('.mobile-slider')) {
     (function () {
       "use strict";
 
-      const breakpoint = window.matchMedia("(min-width:1024px)");
+      const breakpoint = window.matchMedia("(min-width:576px)");
       let slider;
 
       const enableSwiper = function () {
@@ -589,7 +594,7 @@ __webpack_require__.r(__webpack_exports__);
 const getHeaderHeight = () => {
   var _document;
 
-  const headerHeight = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('.header').offsetHeight;
+  const headerHeight = (_document = document) === null || _document === void 0 ? void 0 : _document.querySelector('header').offsetHeight;
   document.querySelector(':root').style.setProperty('--header-height', "".concat(headerHeight, "px"));
 };
 

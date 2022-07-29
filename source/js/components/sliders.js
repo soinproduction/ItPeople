@@ -9,7 +9,7 @@ for (const mobileSlider of document.querySelectorAll('.mobile-slider')) {
     (function () {
       "use strict";
 
-      const breakpoint = window.matchMedia("(min-width:1024px)");
+      const breakpoint = window.matchMedia("(min-width:576px)");
       let slider;
 
       const enableSwiper = function () {
