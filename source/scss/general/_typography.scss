@@ -1,20 +1,61 @@
-.main-title {
-  font-style: normal;
-  font-weight: 600;
-  font-size: clamp(40px, 5vw, 60px);
-  line-height: 125%;
-  font-family: var(--font-family);
-  text-align: center;
-  color: var(--color-a);
-  text-transform: uppercase;
+.typed-out{
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 4.5s steps(20, end) infinite;
+  width: 0;
+  max-width: fit-content;
+  padding-right: 3px;
+  position: relative;
+
+  &::before {
+    width: 3px;
+    height: 100%;
+    right: 0px;
+    position: absolute;
+    content: '';
+    background-color: var(--color-a);
+    animation: pulse 1s infinite cubic-bezier(1.0,0,0,1.0);
+  }
+}
+
+
+@keyframes pulse {
+  0% { opacity: 0;}
+
+  100% { opacity: 1;}
+}
+
+@keyframes typing {
+  0% { width: 0 }
+
+  50% {width: 100%;}
+
+  100% { width: 0% }
+}
+
+.page--ios {
+  .card-background::before {
+    background: rgba(255, 167, 242, 0.07);
+  }
+}
+
+@-moz-document url-prefix() {
+  .card-background::before {
+    background: rgba(255, 167, 242, 0.07);
+  }
 }
 
 
 .card-background {
   backdrop-filter: blur(2px);
   border-radius: 30px;
+  // background-image: url(../img/card-bg.svg);
+  // background-repeat: no-repeat;
+  // background-size: cover;
   position: relative;
   z-index: 0;
+
+  // background-color: red;
 
 
   &::before,

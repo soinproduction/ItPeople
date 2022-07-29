@@ -9,7 +9,12 @@ body {
   font-weight: inherit;
   font-size: inherit;
   line-height: inherit;
-  min-height: 800px;
+  min-height: 600px;
+
+  @media screen and (max-width: 1025px) {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 
@@ -20,6 +25,11 @@ html {
   font-weight: 400;
   font-size: 16px;
   line-height: normal;
+
+  @media screen and (max-width: 1025px) {
+    overflow-x: hidden;
+    width: 100%;
+  }
 }
 
 *,
@@ -44,15 +54,27 @@ a {
 }
 
 section {
-  min-height: 800px;
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  min-height: 100vh;
+  // height: 100vh;
+  // display: flex;
+  // align-items: center;
+  // justify-content: center;
   background-size: cover;
+  position: relative;
   background-repeat: no-repeat;
   background-position: center;
-  overflow: hidden;
+
+
+  &__inner {
+    position: relative;
+    overflow: hidden;
+  }
+
+
+  @media screen and (max-width: 1025px) {
+    min-height: initial;
+    padding: 50px 0;
+  }
 }
 
 button {
@@ -149,6 +171,10 @@ input[type="number"] {
   &.active {
     display: block;
   }
+}
+
+[data-mini] {
+  cursor: pointer;
 }
 
 .dis-scroll {

@@ -3,4 +3,28 @@ header {
   z-index: 20;
   top: clamp(25px, 3.472vw, 50px);
   left: clamp(25px, 5.385vw, 70px);
+  bottom: clamp(25px, 3.472vw, 50px);
+
+  @media screen and (max-width: 1025px) {
+    position: fixed;
+    z-index: 20;
+    bottom: initial;
+    top: 0;
+    left: 0;
+    bottom: initial;
+    right: 0;
+
+    background: linear-gradient(180deg, #0A0310 0%, rgba(10, 3, 16, 0) 100%);
+
+
+    // display: none;
+  }
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+  height: 100%;
 }

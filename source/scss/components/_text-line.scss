@@ -1,0 +1,22 @@
+.text-line {
+  pointer-events: none;
+
+  &__item {
+    font-family: var(--font-family);
+    font-style: normal;
+    white-space: nowrap;
+    font-weight: 700;
+    font-size: clamp(32px, 6.944vw, 100px);
+    line-height: clamp(32px, 6.944vw, 100px);
+    text-align: center;
+    text-transform: uppercase;
+    color: var(--color-a);
+    opacity: 0.05;
+    width: fit-content;
+  }
+
+  &__list {
+    -webkit-transition-timing-function: linear !important;
+    transition-timing-function: linear !important;
+  }
+}

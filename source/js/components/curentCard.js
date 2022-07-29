@@ -1,7 +1,7 @@
 const cardParrents = [...document.querySelectorAll('.mini-card')];
 
 for (const cardParrent of cardParrents) {
-  const cardButton = cardParrent.querySelector('[data-mini]');
+  // const cardButton = cardParrent.querySelector('[data-mini]');
   const bigCards = [...document.querySelectorAll('[data-big]')];
   const listParrent = document.querySelector('.index-second__mini');
 
@@ -13,7 +13,7 @@ for (const cardParrent of cardParrents) {
     listParrent.classList.add('active');
   }
 
-  cardButton.addEventListener('click', cardButtonHendler);
+  cardParrent.addEventListener('click', cardButtonHendler);
 
   bigCards.map((bigCard) => {
     bigCard.querySelector('.big-card__hide').addEventListener('click', function(){

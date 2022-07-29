@@ -1,0 +1,104 @@
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  grid-gap: 10px;
+  width: 100%;
+
+  &__label {
+    position: relative;
+    height: 54px;
+
+    &::after {
+      border-image-slice: 10%;
+    }
+  }
+
+  &__input {
+    background-color: transparent;
+    border: none;
+    text-indent: 22px;
+
+    font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--color-a);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--color-a);
+    }
+  }
+
+  .focus-visible ~ &__placeholder {
+    opacity: 0;
+  }
+
+  &__placeholder {
+    position: absolute;
+    pointer-events: none;
+    transition: all .4s;
+  }
+
+  &__area {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    resize: none;
+    outline: none;
+    padding: 16px 22px;
+
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    color: var(--color-a);
+
+    &::placeholder {
+      font-family: var(--font-family);
+      font-style: normal;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 20px;
+      color: var(--color-a);
+    }
+  }
+
+  &__button {
+    width: 189px;
+    height: 54px;
+    background: var(--color-c);
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: var(--font-family);
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 100%;
+    color: var(--color-a);
+    margin: 10px auto 0;
+    transition: all .4s;
+    will-change: transform;
+
+    &:hover {
+      background-color: #dd009e;
+      transform: scale(1.05);
+    }
+  }
+
+  &__checkboxes {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-gap: 18px;
+    margin: 10px auto 0;
+  }
+}

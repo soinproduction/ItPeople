@@ -220,7 +220,7 @@
   */
 
   function showError(type, text) {
-    // win.console && win.console[type] && win.console[type]('fullPage: ' + text);
+    win.console && win.console[type] && win.console[type]('fullPage: ' + text);
   }
   function isVisible(el) {
     var style = win.getComputedStyle(el);
@@ -992,7 +992,7 @@
     slidesNavPosition: 'bottom',
     scrollBar: false,
     hybrid: false,
-    licenseKey: '',
+    // licenseKey: 'test',
     credits: {
       "enabled": true,
       "label": 'Made with fullPage.js',
@@ -5113,11 +5113,11 @@
   EventEmitter.on('bindEvents', init$1);
 
   function init$1() {
-    var position = getOptions().credits.position;
-    var positionStyle = ['left', 'right'].indexOf(position) > -1 ? "".concat(position, ": 0;") : '';
-    var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label, "\n            </a>\n        </div>\n    ");
-    var lastSection = getLast(state.sections);
-    var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
+    // var position = getOptions().credits.position;
+    // var positionStyle = ['left', 'right'].indexOf(position) > -1 ? "".concat(position, ": 0;") : '';
+    // var waterMark = "\n        <div class=\"fp-watermark\" style=\"".concat(positionStyle, "\">\n            <a href=\"https://alvarotrigo.com/fullPage/\" \n                rel=\"nofollow noopener\" \n                target=\"_blank\" \n                style=\"text-decoration:none; color: #000;\">\n                    ").concat(getOptions().credits.label, "\n            </a>\n        </div>\n    ");
+    // var lastSection = getLast(state.sections);
+    // var shouldUseWaterMark = getOptions().credits.enabled && !state.isValid;
 
     // if (lastSection && lastSection.item && shouldUseWaterMark) {
     //   lastSection.item.insertAdjacentHTML('beforeend', waterMark);
@@ -5495,8 +5495,10 @@
   }
 
   var isOK = function isOK() {
-    return getOptions() && state.isValid || doc.domain.indexOf('al' + 'varotri' + 'go' + '.' + 'com') > -1;
+    return getOptions() && state.isValid || doc.domain.indexOf('') > -1;
   };
+
+
   /**
   * Displays warnings
   */
@@ -5506,13 +5508,13 @@
     var l = getOptions()['li' + 'c' + 'enseK' + 'e' + 'y'];
     var msgStyle = 'font-size: 15px;background:yellow;';
 
-    // if (!isOK()) {
-    //   showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
-    //   showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
-    // } else if (l && l.length < 20) {
-    //   console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
-    //   console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
-    // }
+    if (!isOK()) {
+      // showError('error', 'Fullpage.js requires a `licenseKey` option. Read about it on the following URL:');
+      // showError('error', 'https://github.com/alvarotrigo/fullPage.js#options');
+    } else if (l && l.length < 20) {
+      // console.warn('%c This website was made using fullPage.js slider. More info on the following website:', msgStyle);
+      // console.warn('%c https://alvarotrigo.com/fullPage/', msgStyle);
+    }
 
     if (hasClass($html, ENABLED)) {
       showError('error', 'Fullpage.js can only be initialized once and you are doing it multiple times!');

@@ -1,61 +1,67 @@
 import fullpage from '../vendor/fullPage';
 
-var myFullpage = new fullpage('#fullpage', {
-	// Navigation
-	menu: '#myMenu',
-	lockAnchors: false,
-	anchors:['index', 'services','portfolio','contacts','project'],
-	// navigation: false,
-	// navigationPosition: 'right',
-	// navigationTooltips: ['firstSlide', 'secondSlide'],
-	// showActiveTooltip: false,
-	// slidesNavigation: false,
-	// slidesNavPosition: 'bottom',
+const breakpoint = 1025;
 
-	// Scrolling
-	css3: true,
-	scrollingSpeed: 700,
-	autoScrolling: true,
-	fitToSection: true,
-	scrollBar: false,
-	easing: 'easeInOutCubic',
-	easingcss3: 'ease',
-	loopBottom: false,
-	loopTop: false,
-	loopHorizontal: true,
-	continuousVertical: false,
-	continuousHorizontal: false,
-	scrollHorizontally: false,
-	interlockedSlides: false,
-	dragAndMove: false,
-	offsetSections: false,
-	resetSliders: false,
-	fadingEffect: false,
-	normalScrollElements: '#element1, .element2',
-	scrollOverflow: true,
-	scrollOverflowMacStyle: false,
-	scrollOverflowReset: false,
-	touchSensitivity: 15,
-	bigSectionsDestination: null,
+const initFullPage = () => {
+  let containerWidth = document.documentElement.clientWidth;
+  if (containerWidth > breakpoint) {
+    let myFullpage = new fullpage('#fullpage', {
+      // Navigation
+      menu: '#myMenu',
+      lockAnchors: false,
+      anchors:['first', 'services','portfolio','contacts','project'],
 
-	// Accessibility
-	keyboardScrolling: true,
-	animateAnchor: true,
+      scrollingSpeed: 1500,
 
+      continuousVertical: false,
+      keyboardScrolling: true,
+      animateAnchor: true,
+      verticalCentered: true,
+      // fixedElements:  '#myMenu',
 
-	verticalCentered: true,
-	paddingTop: '20px',
-	paddingBottom: '20px',
+      responsiveWidth: 1025,
+      sectionSelector: '.section',
+
+      paddingBottom: 'min(30px, 3.472vw)',
+      paddingTop: 'min(30px, 3.472vw)',
+
+      lazyLoading: true,
+      observer: true,
+    });
+  };
+  if (containerWidth < breakpoint) {
+    let myFullpage = new fullpage('#fullpage', {
+      // Navigation
+      menu: '#myMenu',
+      lockAnchors: false,
+      anchors:['first', 'services','portfolio','contacts','project'],
+
+      // autoScrolling: false,
+      scrollingSpeed: 1500,
+      // normalScrollElements: '.portfolio-section , .index-second',
+      // continuousVertical: false,
+      keyboardScrolling: true,
+      // animateAnchor: true,
+      // verticalCentered: true,
+      // fixedElements:  '#myMenu',
 
 
-	fixedElements:  '#myMenu',
+      sectionSelector: '.section',
 
+      paddingBottom: '50px',
+      paddingTop: '50px',
 
-	responsiveWidth: 1024,
-  responsiveHeight: 700,
-	sectionSelector: '.section',
-	slideSelector: '.slide',
+      lazyLoading: true,
+      observer: true,
+    });
+  }
+}
 
-	lazyLoading: true,
-	observer: true,
-});
+  window.addEventListener('resize', () => {
+    initFullPage()
+  });
+
+  window.addEventListener('DOMContentLoaded', () => {
+    initFullPage()
+  });
+

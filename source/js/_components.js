@@ -1,6 +1,7 @@
 import './components/fullPageInit';
 import './components/curentCard';
-// import './components/sliders';
+import './components/galery';
+import './components/sliders';
 // import './components/tabs';
 
 // import './components/accordions';

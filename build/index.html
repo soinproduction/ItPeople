@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="Ru">
-  <head>
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta name="Description" content="default">
@@ -15,87 +15,129 @@
 </head>
 
 <body>
-    <header>
+  <header>
     <div class="header">
       <a href="#index" class="header__logo">
         <svg width='126' height='60'>
           <use href='img/sprite/sprite.svg#logo'></use>
         </svg>
       </a>
+
+      <nav class="main-nav" id="myMenu">
+        <ul class="main-nav__list">
+          <li class="main-nav__item" data-menuanchor="first">
+            <a href="#first" class="main-nav__link">
+              Главная
+            </a>
+          </li>
+          <li class="main-nav__item" data-menuanchor="services">
+            <a href="#services" class="main-nav__link">
+              Услуги
+            </a>
+          </li>
+          <li class="main-nav__item" data-menuanchor="portfolio">
+            <a href="#portfolio" class="main-nav__link">
+              Портфолио
+            </a>
+          </li>
+          <li class="main-nav__item" data-menuanchor="contacts">
+            <a href="#contacts" class="main-nav__link">
+              Контакты
+            </a>
+          </li>
+          <li class="main-nav__item" data-menuanchor="project">
+            <a href="#project" class="main-nav__link">
+              Начать проект
+            </a>
+          </li>
+
+        </ul>
+      </nav>
+
+      <ul class="social-list">
+        <li class="social-list__item">
+          <a href="#" class="social-list__link">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#facebook'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#instagram'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#tw'></use>
+            </svg>
+          </a>
+        </li>
+        <li class="social-list__item">
+          <a href="#" class="social-list__link">
+            <svg width='24' height='24'>
+              <use href='img/sprite/sprite.svg#tiktok'></use>
+            </svg>
+          </a>
+        </li>
+      </ul>
+
     </div>
 </header>
 
-    <nav class="main-nav" id="myMenu">
-      <ul class="main-nav__list">
-        <li class="main-nav__item active" data-menuanchor="index">
-          <a href="#index" class="main-nav__link">
-            Главная
-          </a>
-        </li>
-        <li class="main-nav__item" data-menuanchor="services">
-          <a href="#services" class="main-nav__link" >
-            Услуги
-          </a>
-        </li>
-        <li class="main-nav__item" data-menuanchor="portfolio">
-          <a href="#portfolio" class="main-nav__link">
-            Портфолио
-          </a>
-        </li>
-        <li class="main-nav__item" data-menuanchor="contacts">
-          <a href="#contacts" class="main-nav__link">
-            Контакты
-          </a>
-        </li>
-        <li class="main-nav__item" data-menuanchor="project">
-          <a href="#project" class="main-nav__link">
-            Начать проект
-          </a>
-        </li>
+  <main id="fullpage">
 
-      </ul>
-    </nav>
-
-    <main id="fullpage">
-
-      <section class="index-first section active" style="background-image: url(img/first-bg.png);">
-
+    <section class="index-first section active" style="background-image: url(img/first-bg.png);">
+      <div class="section__inner">
         <div class="index-first__image">
-            <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
+          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
         </div>
 
         <div class="container">
           <div class="index-first__box">
-              <div class="main-top index-first__top">
-                <h2 class="main-top__title">
-                  ITpeople
-                </h2>
-                <p class="main-top__subtitle">
-                  Смотрите больше о нашей компании
-                </p>
-              </div>
-              <div class="index-first__video">
-                <picture>
-                  <source type='image/webp' srcset='img/video/video-prev.webp'>
-                  <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
-                </picture>
-              </div>
+            <div class="main-top index-first__top">
+              <h2 class="main-top__title typed-out">
+                КОДИНГ и ДИЗАЙН
+              </h2>
+              <p class="main-top__subtitle">
+                Смотрите больше о нашей компании
+              </p>
+            </div>
+
+            <div id="indexVideo" class="index-first__video">
+              <picture data-poster="img/video/video-prev.png" data-html="#video1">
+                <source type='image/webp' srcset='img/video/video-prev.webp'>
+                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
+              </picture>
+            </div>
+
+            <div style="display:none;" id="video1">
+              <video class="lg-video-object lg-html5" controls preload="yes">
+                <source src="img/video/video.mp4" type="video/mp4">
+                <source src="img/video/video.webm" type="video/webm">
+              </video>
+            </div>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
+    <section class="index-second section" style="background-image: url(img/second-bg.png);">
 
-      <section class="index-second section" style="background-image: url(img/second-bg.png);">
+      <div class="section__inner">
         <div class="index-second__image">
           <img width='749' height='759' src='img/second-image.svg' alt='background'>
-      </div>
+        </div>
 
-      <div class="container swiper-container">
+        <div class="container">
 
-        <div class="index-second__inner">
-          <ul class="index-second__mini swiper-wrapper">
-            <li class="index-second__item swiper-slide">
-                <div class="mini-card card-background">
-                  <button class="mini-card__btn" data-mini="1">
+          <div class="index-second__inner mobile-slider swiper-container">
+            <ul class="index-second__mini swiper-wrapper">
+              <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background" data-mini="1">
+                  <button class="mini-card__btn">
                     <svg width='10' height='16'>
                       <use href='img/sprite/sprite.svg#arrow-r'></use>
                     </svg>
@@ -111,13 +153,14 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Создаем всевозможные программы, веб приложения, онлайн сервисы любой сложности. Автоматизируем бизнес процессы, разрабатываем ботов, парсеры, десктоптные программы для Windows, Linux, MacOS и др.
+                    Создаем всевозможные программы, веб приложения, онлайн сервисы любой сложности. Автоматизируем
+                    бизнес процессы, разрабатываем ботов, парсеры, десктоптные программы для Windows, Linux, MacOS и др.
                   </p>
                 </div>
-            </li>
-            <li class="index-second__item swiper-slide">
-                <div class="mini-card card-background">
-                  <button class="mini-card__btn" data-mini="2">
+              </li>
+              <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background" data-mini="2">
+                  <button class="mini-card__btn">
                     <svg width='10' height='16'>
                       <use href='img/sprite/sprite.svg#arrow-r'></use>
                     </svg>
@@ -133,13 +176,14 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Разрабатываем мобильные приложения/игры под iOS и Android любой сложности! Вам срочно нужно работающие мобильное приложение к уже существующему бизнесу? Мы его создадим!
+                    Разрабатываем мобильные приложения/игры под iOS и Android любой сложности! Вам срочно нужно
+                    работающие мобильное приложение к уже существующему бизнесу? Мы его создадим!
                   </p>
                 </div>
-            </li>
-            <li class="index-second__item swiper-slide">
-                <div class="mini-card card-background">
-                  <button class="mini-card__btn" data-mini="3">
+              </li>
+              <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background" data-mini="3">
+                  <button class="mini-card__btn">
                     <svg width='10' height='16'>
                       <use href='img/sprite/sprite.svg#arrow-r'></use>
                     </svg>
@@ -155,13 +199,15 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Сопровождение программного обеспечения — у вас уже есть программное обеспечение, но оно требует исправлений, изменений и улучшений? Мы предлагаем его оптимизацию и устранение недостатков, с последующим обслуживанием
+                    Сопровождение программного обеспечения — у вас уже есть программное обеспечение, но оно требует
+                    исправлений, изменений и улучшений? Мы предлагаем его оптимизацию и устранение недостатков, с
+                    последующим обслуживанием
                   </p>
                 </div>
-            </li>
-            <li class="index-second__item swiper-slide">
-                <div class="mini-card card-background">
-                  <button class="mini-card__btn" data-mini="4">
+              </li>
+              <li class="index-second__item swiper-slide">
+                <div class="mini-card card-background" data-mini="4">
+                  <button class="mini-card__btn">
                     <svg width='10' height='16'>
                       <use href='img/sprite/sprite.svg#arrow-r'></use>
                     </svg>
@@ -177,247 +223,553 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Создадим без сайт с нуля под ключ с уникальным дизайном и любой сложности! Лендинги продуктов или услуг, сайты-визитки, корпоративные сайты, интернет-магазины, веб-приложения, а также дизайн визиток, логотипов, упаковок, товаров и прочего
+                    Создадим без сайт с нуля под ключ с уникальным дизайном и любой сложности! Лендинги продуктов или
+                    услуг, сайты-визитки, корпоративные сайты, интернет-магазины, веб-приложения, а также дизайн
+                    визиток, логотипов, упаковок, товаров и прочего
                   </p>
-                </div>>
-            </li>
-          </ul>
+                </div>
+              </li>
+            </ul>
 
-          <ul class="index-second__big">
-            <li class="big-card" data-big="1">
+            <p>rsfdlng</p>
 
-              <button class="big-card__hide">
-                <svg width='16' height='16'>
-                  <use href='img/sprite/sprite.svg#close'></use>
-                </svg>
+            <ul class="index-second__big">
+              <li class="big-card" data-big="1">
 
-              </button>
+                <button class="big-card__hide">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                  </svg>
 
-              <article class="big-card__article card-background">
-                <div class="big-card__top">
-                  <div class="big-card__icon">
+                </button>
+
+                <article class="big-card__article card-background">
+                  <div class="big-card__top">
+                    <div class="big-card__icon">
                       <img width='70' height='70' src="img/sprite/icon.svg" alt="icon">
+                    </div>
+
+                    <span class="big-card__title">
+                      Разработка <br>
+                      програмного обеспечения
+                    </span>
+
                   </div>
 
-                  <span class="big-card__title">
-                    Разработка <br>
-                    програмного обеспечения
-                  </span>
+                  <p>
+                    Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не
+                    используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого
+                    сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами,
+                    крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                    <br><br>
+                    Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему
+                    привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний.
+                    Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com,
+                    именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно
+                    сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                  </p>
 
-                </div>
+                </article>
+              </li>
+              <li class="big-card" data-big="2">
 
-                <p>
-                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
-                  <br><br>
-                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
-                </p>
+                <button class="big-card__hide">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                  </svg>
+                </button>
 
-              </article >
-            </li>
-            <li class="big-card" data-big="2">
+                <article class="big-card__article card-background">
+                  <div class="big-card__top">
+                    <div class="big-card__icon">
+                      <img width='70' height='70' src="img/sprite/icon2.svg" alt="icon">
+                    </div>
 
-              <button class="big-card__hide">
-                <svg width='16' height='16'>
-                  <use href='img/sprite/sprite.svg#close'></use>
-                </svg>
-              </button>
+                    <span class="big-card__title">
+                      Разработка <br>
+                      мобильных приложений
+                    </span>
 
-              <article class="big-card__article card-background">
-                <div class="big-card__top">
-                  <div class="big-card__icon">
-                    <img width='70' height='70' src="img/sprite/icon2.svg" alt="icon">
                   </div>
 
-                  <span class="big-card__title">
-                    Разработка <br>
-                    мобильных приложений
-                  </span>
+                  <p>
+                    Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не
+                    используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого
+                    сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами,
+                    крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                    <br><br>
+                    Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему
+                    привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний.
+                    Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com,
+                    именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно
+                    сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                  </p>
 
-                </div>
+                </article>
+              </li>
+              <li class="big-card" data-big="3">
 
-                <p>
-                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
-                  <br><br>
-                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
-                </p>
+                <button class="big-card__hide">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                  </svg>
+                </button>
 
-              </article >
-            </li>
-            <li class="big-card" data-big="3">
+                <article class="big-card__article card-background">
+                  <div class="big-card__top">
+                    <div class="big-card__icon">
+                      <img width='70' height='70' src="img/sprite/icon3.svg" alt="icon">
+                    </div>
 
-              <button class="big-card__hide">
-                <svg width='16' height='16'>
-                  <use href='img/sprite/sprite.svg#close'></use>
-                </svg>
-              </button>
+                    <span class="big-card__title">
+                      Сопровождение <br>
+                      программного обеспечения
+                    </span>
 
-              <article class="big-card__article card-background">
-                <div class="big-card__top">
-                  <div class="big-card__icon">
-                    <img width='70' height='70' src="img/sprite/icon3.svg" alt="icon">
                   </div>
 
-                  <span class="big-card__title">
-                    Сопровождение <br>
-                    программного обеспечения
-                  </span>
+                  <p>
+                    Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не
+                    используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого
+                    сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами,
+                    крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                    <br><br>
+                    Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему
+                    привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний.
+                    Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com,
+                    именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно
+                    сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
+                  </p>
 
-                </div>
+                </article>
+              </li>
+              <li class="big-card" data-big="4">
 
-                <p>
-                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
-                  <br><br>
-                  Так же предлагаем отдельную услугу по созданию дизайна, наши дизайнеры создадут по настоящему привлекательный дизайн для вашего сайта, ваших визиток, упаковок для товара, логотипов компаний. Наша заслуга и гордость — известный итальянский бренд элитной косметики Rituals — Rituals.com, именно они выбрали наш дизайн, для упаковки своей косметики! Расскажите нам подробно, какой именно сайт или дизайн Вам нужен, мы совершенно бесплатно проанализируем и сообщим вам о сроках и стоимости
-                </p>
+                <button class="big-card__hide">
+                  <svg width='16' height='16'>
+                    <use href='img/sprite/sprite.svg#close'></use>
+                  </svg>
+                </button>
 
-              </article >
-            </li>
-            <li class="big-card" data-big="4">
+                <article class="big-card__article card-background">
+                  <div class="big-card__top">
+                    <div class="big-card__icon">
+                      <img width='70' height='70' src="img/sprite/icon4.svg" alt="icon">
+                    </div>
 
-              <button class="big-card__hide">
-                <svg width='16' height='16'>
-                  <use href='img/sprite/sprite.svg#close'></use>
-                </svg>
-              </button>
+                    <span class="big-card__title">
+                      Веб-сайты <br>
+                      и дизайн
+                    </span>
 
-              <article class="big-card__article card-background">
-                <div class="big-card__top">
-                  <div class="big-card__icon">
-                    <img width='70' height='70' src="img/sprite/icon4.svg" alt="icon">
                   </div>
 
-                  <span class="big-card__title">
-                    Веб-сайты <br>
-                    и дизайн
-                  </span>
+                  <p>
+                    Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не
+                    используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого
+                    сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами,
+                    крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
+                  </p>
 
-                </div>
+                </article>
+              </li>
 
-                <p>
-                  Создадим веб-сайты с нуля и под ключ с уникальным дизайном и любой сложности, в нашей работе мы не используем шаблонов для создания сайта, ваш сайт будет уникальным! Начиная от самого простого сайта-визитки врача, адвоката, фитнес тренера, заканчивая сложными сайтами интернет-магазинами, крипто-обменниками, сайтами знакомств с поддержкой видео/аудио конференций
-                </p>
+            </ul>
 
-              </article >
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+    <section class="portfolio-section section" style="background-image: url(img/portfolio-bg.png);">
+      <div class="section__inner">
+        <div class="container">
+          <div class="portfolio-section__box">
+            <div class="portfolio-section__slider swiper-container">
+              <ul class="swiper-wrapper">
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+                <li class="swiper-slide">
+                  <div class="portfolio-item">
+                    <div class="portfolio-item__inner card-background">
+                      <div class="portfolio-item__image">
+                        <picture>
+                          <source type='image/webp' srcset='img/portfolio.webp'>
+                          <img width='252' height='299' src='img/portfolio.png' alt='project image'>
+                        </picture>
+                      </div>
+                      <div class="portfolio-item__top">
+                        <span class="portfolio-item__title">
+                          COMPANY
+                        </span>
+                        <p class="portfolio-item_subtitle">Web design</p>
+                      </div>
+                      <p class="portfolio-item__description">
+                        Для компании «COMPANY» разработали уникальный дизайн мобильного приложения который решит любую
+                        задачу с которой приходит клиент
+                      </p>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+
+            <nav class="portfolio-section__nav">
+              <div class="portfolio-section__slider-nav swiper-container">
+                <ul class="swiper-wrapper">
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 1
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 2
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 3
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 4
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 5
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 6
+                    </p>
+                  </li>
+                  <li class="swiper-slide">
+                    <p class="portfolio-section__description">
+                      Project «Des» 7
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="contact-section section" style="background-image: url(img/contact-bg.png);">
+
+      <div class="section__inner">
+
+        <div class="text-line swiper-container contact-section__line">
+          <ul class="swiper-wrapper text-line__list">
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
             </li>
-
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
+            </li>
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
+            </li>
           </ul>
-
         </div>
 
-      </div>
-      </section>
-
-      <section class="section" style="background-image: url(img/first-bg.png);">
-        <div class="index-first__image">
-          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
-      </div>
-
-      <div class="container">
-        <div class="index-first__box">
-            <div class="main-top index-first__top">
-              <h2 class="main-top__title">
-                ITpeople
+        <div class="container">
+          <div class="contact-section__box">
+            <div class="main-top contact-section__top">
+              <h2 class="main-top__title contact-section__title">
+                Напишите и мы сами свяжемся с Вами
               </h2>
-              <p class="main-top__subtitle">
-                Смотрите больше о нашей компании
+            </div>
+
+            <div class="contact-section__inner">
+              <form action="#" class="contact-form">
+                <label for="#" class="contact-form__label card-background">
+                  <input type="text" placeholder="Имя" class="contact-form__input">
+                </label>
+                <label for="#" class="contact-form__label card-background">
+                  <input type="tel" placeholder="Номер телефона" class="contact-form__input">
+                </label>
+                <label for="#" class="contact-form__area-label card-background">
+                  <textarea class="contact-form__area" placeholder="Сообщение" cols="30" rows="7"></textarea>
+                </label>
+                <button type="submit" class="contact-form__button">
+                  Отправить
+                </button>
+              </form>
+
+              <ul class="contact-list">
+                <li class="contact-list__group">
+                  <a href="tel:+380950000000" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#phone'></use>
+                    </svg>
+                    +38 (095) 000-00-00
+                  </a>
+                  <a href="tel:+380950000000" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#tell'></use>
+                    </svg>
+                    +38 (095) 000-00-00
+                  </a>
+                </li>
+
+                <li class="contact-list__group">
+                  <a href="#" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#telegram'></use>
+                    </svg>
+                    Telegram
+                  </a>
+                  <a href="#" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#viber'></use>
+                    </svg>
+                    Viber
+                  </a>
+                  <a href="#" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#whatsapp'></use>
+                    </svg>
+                    WhatsApp
+                  </a>
+                </li>
+
+                <li class="contact-list__group">
+                  <a href="mailto:itpeople@gmail.com" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#email'></use>
+                    </svg>
+                    itpeople@gmail.com
+                  </a>
+                  <a href="#" class="contact-list__link">
+                    <svg width='24' height='24'>
+                      <use href='img/sprite/sprite.svg#location-pin'></use>
+                    </svg>
+                    USA, New-York, st 99
+                  </a>
+                </li>
+
+              </ul>
+
+            </div>
+
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <section class="project-section section" style="background-image: url(img/project-bg.png);">
+
+      <div class="section__inner">
+
+        <div class="text-line swiper-container project-section__line">
+          <ul class="swiper-wrapper text-line__list">
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
+            </li>
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
+            </li>
+            <li class="swiper-slide text-line__item">
+              Напишите и мы сами свяжемся с Вами
+            </li>
+          </ul>
+        </div>
+
+        <div class="container">
+          <div class="project-section__box">
+            <div class="main-top project-section__top">
+              <h2 class="main-top__title project-section__title">
+                Начнем?
+              </h2>
+              <p class="main-top__subtitle project-section__subtitle">
+                Опишите свой проект, мы проведем экспресс-аудит совершенно бесплатно, свяжемся с Вами и подробно расскажем, как именно реализовать Ваш проект и примерную стоимость
               </p>
             </div>
-            <div class="index-first__video">
-              <picture>
-                <source type='image/webp' srcset='img/video/video-prev.webp'>
-                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
-              </picture>
-            </div>
+
+            <form action="#" class="contact-form">
+              <label for="#" class="contact-form__label card-background">
+                <input type="text" placeholder="Имя" class="contact-form__input">
+              </label>
+              <label for="#" class="contact-form__label card-background">
+                <input type="tel" placeholder="Номер телефона" class="contact-form__input">
+              </label>
+              <label for="#" class="contact-form__area-label card-background">
+                <textarea class="contact-form__area" placeholder="Сообщение" cols="30" rows="7"></textarea>
+              </label>
+
+              <div class="contact-form__checkboxes">
+                <div class="checkbox">
+                  <label class="custom-checkbox">
+                    <input type="radio" name="mail" value="#" checked>
+                    <span>Telegram</span>
+                  </label>
+                </div>
+
+                <div class="checkbox">
+                  <label class="custom-checkbox">
+                    <input type="radio" name="mail" value="#">
+                    <span>Viber</span>
+                  </label>
+                </div>
+              </div>
+
+              <button type="submit" class="contact-form__button">
+                Отправить
+              </button>
+            </form>
+
+          </div>
         </div>
       </div>
-      </section>
-      <section class="section" style="background-image: url(img/first-bg.png);">
-        <div class="index-first__image">
-          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
-      </div>
 
-      <div class="container">
-        <div class="index-first__box">
-            <div class="main-top index-first__top">
-              <h2 class="main-top__title">
-                ITpeople
-              </h2>
-              <p class="main-top__subtitle">
-                Смотрите больше о нашей компании
-              </p>
-            </div>
-            <div class="index-first__video">
-              <picture>
-                <source type='image/webp' srcset='img/video/video-prev.webp'>
-                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
-              </picture>
-            </div>
-        </div>
-      </div>
-      </section>
-      <section class="section" style="background-image: url(img/first-bg.png);">
-        <div class="index-first__image">
-          <img width='870' height='795' src='img/fisrt-image.svg' alt='man'>
-      </div>
+    </section>
 
-      <div class="container">
-        <div class="index-first__box">
-            <div class="main-top index-first__top">
-              <h2 class="main-top__title">
-                ITpeople
-              </h2>
-              <p class="main-top__subtitle">
-                Смотрите больше о нашей компании
-              </p>
-            </div>
-            <div class="index-first__video">
-              <picture>
-                <source type='image/webp' srcset='img/video/video-prev.webp'>
-                <img width='680' height='383' src='img/video/video-prev.png' alt='preview'>
-              </picture>
-            </div>
-        </div>
-      </div>
-      </section>
+  </main>
 
-    </main>
-
-    <footer>
+  <footer>
   <div class="container">
-    <ul class="social-list">
-      <li class="social-list__item">
-        <a href="#" class="social-list__link">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#facebook'></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-list__item">
-        <a href="#" class="social-list__link">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#instagram'></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-list__item">
-        <a href="#" class="social-list__link">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#tw'></use>
-          </svg>
-        </a>
-      </li>
-      <li class="social-list__item">
-        <a href="#" class="social-list__link">
-          <svg width='24' height='24'>
-            <use href='img/sprite/sprite.svg#tiktok'></use>
-          </svg>
-        </a>
-      </li>
-    </ul>
+
   </div>
 </footer>
 
-    <script type="text/javascript" src="js/main.js"></script>
+  <script type="text/javascript" src="js/main.js"></script>
 </body>
 
 </html>

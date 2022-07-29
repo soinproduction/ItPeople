@@ -1,14 +1,16 @@
 .main-top {
   display: flex;
   flex-direction: column;
+  align-items: flex-start;
   grid-gap: 10px;
 
   &__title {
     font-family: var(--font-family);
     font-style: normal;
     font-weight: 700;
-    font-size: clamp(32px, 3.472vw, 50px);
+    font-size: clamp(30px, 3.472vw, 50px);
     line-height: 110%;
+    text-transform: uppercase;
     color: var(--color-a);
   }
 
