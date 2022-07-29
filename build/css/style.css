@@ -2484,9 +2484,6 @@ p a {
             flex-direction: column;
     text-align: center;
   }
-  .big-card__top br {
-    display: none;
-  }
 }
 .big-card__title {
   font-family: var(--font-family);

@@ -240,7 +240,14 @@ const initFullPage = () => {
     for (const anchorButton of anchorButtons) {
       anchorButton.addEventListener('click', function (e) {
         e.preventDefault();
+        let items = document.querySelectorAll('.main-nav__item');
+
+        for (const item of items) {
+          item.classList.remove('active');
+        }
+
         const id = e.target.getAttribute('href').replace('#', '');
+        e.target.parentNode.classList.add('active');
         window.scrollTo({
           top: document.querySelector("[data-scroll='".concat(id, "']")).offsetTop - 150,
           behavior: 'smooth'
