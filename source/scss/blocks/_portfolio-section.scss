@@ -38,6 +38,7 @@
 
         .portfolio-item, .portfolio-item__inner  {
           height: 100%;
+          flex-grow: 1;
         }
       }
     }

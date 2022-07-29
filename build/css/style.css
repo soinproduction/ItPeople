@@ -2115,6 +2115,11 @@ input[type=number] {
   }
 }
 
+p a {
+  color: #2F80ED;
+  text-decoration: underline;
+}
+
 /* для элемента input c type="checkbox" */
 .custom-checkbox {
   display: -webkit-box;
@@ -3129,6 +3134,9 @@ header {
   }
   .portfolio-section__slider .swiper-slide .portfolio-item, .portfolio-section__slider .swiper-slide .portfolio-item__inner {
     height: 100%;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
   }
 }
 .portfolio-section__slider-nav {
