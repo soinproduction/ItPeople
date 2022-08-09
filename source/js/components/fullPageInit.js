@@ -36,6 +36,7 @@ const initFullPage = () => {
           }
           const id = e.target.getAttribute('href').replace('#', '');
           e.target.parentNode.classList.add('active');
+      
           window.scrollTo({
             top: document.querySelector(`[data-scroll='${id}']`).offsetTop - 150,
             behavior: 'smooth',

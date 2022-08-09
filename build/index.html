@@ -150,8 +150,7 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Создаем всевозможные программы, веб приложения, онлайн сервисы любой сложности. Автоматизируем
-                    бизнес процессы, разрабатываем ботов, парсеры, десктоптные программы для Windows, Linux, MacOS и др.
+                    Программы, веб-приложения, онлайн сервисы любой сложности, разработка десктопных приложений, ботов, парсеров для Windows, Linux, MacOS и др.
                   </p>
                 </div>
               </li>
@@ -173,8 +172,7 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Разрабатываем мобильные приложения/игры под iOS и Android любой сложности! Вам срочно нужно
-                    работающие мобильное приложение к уже существующему бизнесу? Мы его создадим!
+                    Приложения/игры, под iOS и Android любой сложности! Вам срочно требуется работающие мобильное приложение для вашего бизнеса? Мы его создадим!
                   </p>
                 </div>
               </li>
@@ -196,9 +194,7 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Сопровождение программного обеспечения — у вас уже есть программное обеспечение, но оно требует
-                    исправлений, изменений и улучшений? Мы предлагаем его оптимизацию и устранение недостатков, с
-                    последующим обслуживанием
+                    Сопровождение ПО — у Вас уже есть готовое программное обеспечение, но оно требует исправлений и улучшений? Мы предлагаем его оптимизацию, с последующим обслуживанием
                   </p>
                 </div>
               </li>
@@ -220,9 +216,7 @@
                   </span>
 
                   <p class="mini-card__text">
-                    Создадим без сайт с нуля под ключ с уникальным дизайном и любой сложности! Лендинги продуктов или
-                    услуг, сайты-визитки, корпоративные сайты, интернет-магазины, веб-приложения, а также дизайн
-                    визиток, логотипов, упаковок, товаров и прочего
+                    Создадим сайт любой сложности, с уникальным дизайном! Сайты-визитки, корпоративные сайты, интернет-магазины, а также дизайн визиток, логотипов, упаковки для товара и прочее
                   </p>
                 </div>
               </li>
@@ -573,13 +567,13 @@
         <div class="text-line swiper-container contact-section__line">
           <ul class="swiper-wrapper text-line__list">
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Контакты
             </li>
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Контакты
             </li>
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Контакты
             </li>
           </ul>
         </div>
@@ -588,12 +582,12 @@
           <div class="contact-section__box">
             <div class="main-top contact-section__top">
               <h2 class="main-top__title contact-section__title">
-                Напишите и мы сами свяжемся с Вами
+                Контакты
               </h2>
             </div>
 
             <div class="contact-section__inner">
-              <form action="#" class="contact-form">
+              <!-- <form action="#" class="contact-form">
                 <label for="#" class="contact-form__label card-background">
                   <input type="text" placeholder="Имя" class="contact-form__input">
                 </label>
@@ -606,7 +600,7 @@
                 <button type="submit" class="contact-form__button">
                   Отправить
                 </button>
-              </form>
+              </form> -->
 
               <ul class="contact-list">
                 <li class="contact-list__group">
@@ -676,13 +670,13 @@
         <div class="text-line swiper-container project-section__line">
           <ul class="swiper-wrapper text-line__list">
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Начнем?
             </li>
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Начнем?
             </li>
             <li class="swiper-slide text-line__item">
-              Напишите и мы сами свяжемся с Вами
+              Начнем?
             </li>
           </ul>
         </div>
@@ -698,28 +692,31 @@
               </p>
             </div>
 
-            <form action="#" class="contact-form">
+            <form action="#" class="contact-form" method="POST">
               <label for="#" class="contact-form__label card-background">
-                <input type="text" placeholder="Имя" class="contact-form__input">
+                <input type="text" name="Имя" placeholder="Имя" required class="contact-form__input input-name">
               </label>
               <label for="#" class="contact-form__label card-background">
-                <input type="tel" placeholder="Номер телефона" class="contact-form__input">
+                <input type="tel" name="Номер телефона" placeholder="Номер телефона" required class="contact-form__input input-tel">
+              </label>
+              <label for="#" class="contact-form__label card-background">
+                <input type='email' name="Email" placeholder="Почта" required class="contact-form__input input-mail">
               </label>
               <label for="#" class="contact-form__area-label card-background">
-                <textarea class="contact-form__area" placeholder="Сообщение" cols="30" rows="7"></textarea>
+                <textarea class="contact-form__area" name="Сообщение" placeholder="Сообщение" cols="30" rows="7"></textarea>
               </label>
 
               <div class="contact-form__checkboxes">
                 <div class="checkbox">
                   <label class="custom-checkbox">
-                    <input type="radio" name="mail" value="#" checked>
+                    <input type="radio" name="Свяжитесь со мной через" value="Telegram">
                     <span>Telegram</span>
                   </label>
                 </div>
 
                 <div class="checkbox">
                   <label class="custom-checkbox">
-                    <input type="radio" name="mail" value="#">
+                    <input type="radio" name="Свяжитесь со мной через" value="Viber">
                     <span>Viber</span>
                   </label>
                 </div>
@@ -743,6 +740,23 @@
 
   </div>
 </footer>
+
+  <div class="modal-box" data-menu-overlay>
+    <div class="modal card-background">
+      <h2 class="modal__title">
+        Сообщение <br> отправлено удачно!
+      </h2>
+
+      <p class="modal__text">
+        Ожидайте, мы свяжемся с Вами в <br> ближайшее время
+      </p>
+
+      <button class="modal__close">
+        Закрыть
+      </button>
+
+    </div>
+  </div>
 
   <script type="text/javascript" src="js/main.js"></script>
 </body>

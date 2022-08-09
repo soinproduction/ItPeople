@@ -99,7 +99,7 @@ if (mySlider) {
 
 textLineSliders.map((slider) => {
   let textLine = new Swiper(slider, {
-    spaceBetween: 20,
+    spaceBetween: 40,
     slidesPerView: 'auto',
     speed: 50000,
     loop: true,

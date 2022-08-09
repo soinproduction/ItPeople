@@ -2,6 +2,7 @@
 // Рекомендуется создавать отдельный файл в папке components и подключать все там
 
 // Определение операционной системы на мобильных
+import { openModal } from "./components/modals";
 import { mobileCheck } from "./functions/mobile-check";
 console.log(mobileCheck())
 
@@ -88,11 +89,55 @@ window.addEventListener("resize", () => {
 //   console.log(e.detail.dir);
 // });
 
-// import { validateForms } from './functions/validate-forms';
-// // const rules1 = [...];
+import { validateForms } from './functions/validate-forms';
+const rules1 = [
+  {
+    ruleSelector: '.input-name',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните имя!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-mail',
+    rules: [
+      {
+        rule: 'minLength',
+        value: 3
+      },
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Введите вашу почту!'
+      }
+    ]
+  },
+  {
+    ruleSelector: '.input-tel',
+    tel: true,
+    telError: 'Введите корректный телефон',
+    rules: [
+      {
+        rule: 'required',
+        value: true,
+        errorMessage: 'Заполните телефон!'
+      }
+    ]
+  },
+];
 
-// const afterForm = () => {
-//   console.log('Произошла отправка, тут можно писать любые действия');
-// };
+const afterForm = () => {
+  console.log('Произошла отправка, тут можно писать любые действия');
 
-// validateForms('.order-form', rules1, afterForm);
+  openModal();
+
+};
+
+validateForms('.contact-form', rules1, afterForm);

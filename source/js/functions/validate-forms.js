@@ -4,6 +4,7 @@ import Inputmask from "inputmask";
 export const validateForms = (selector, rules, afterSend) => {
   const form = document?.querySelector(selector);
   const telSelector = form?.querySelector('input[type="tel"]');
+  const radioSelector = form?.querySelector('input[type="tel"]:checked');
 
   if (!form) {
     console.error('Нет такого селектора!');
@@ -16,7 +17,7 @@ export const validateForms = (selector, rules, afterSend) => {
   }
 
   if (telSelector) {
-    const inputMask = new Inputmask('+38 (000) 000-00-00');
+    const inputMask = new Inputmask('+38 (999) 999-99-99');
     inputMask.mask(telSelector);
 
     for (let item of rules) {
